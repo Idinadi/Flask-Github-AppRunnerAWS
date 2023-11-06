@@ -21,4 +21,6 @@ def predict():
     predict = model.predict(data['feature'])
     return jsonify(labels[predict[0].tolist()])
 
+if __name__ == '__main__':
+    app.run(debug=True,host='0.0.0.0')
 
